@@ -42,6 +42,19 @@ Common scripts for running React-based apps and websites.
 `npm run build`
 
 
+## Conventions
+
+### Client
+- Entry point should be `src/client/index.js`
+- SCSS is extracted from `import` statements
+
+### Server
+- Entry point should be `src/server/index.js`
+
+
+## Learn by Example
+Check out [webpack-react-localcss-boilerplate](https://github.com/stokestudio/webpack-react-localcss-boilerplate) for an example project setup.
+
 ---
 
 Inspired by [react-scripts](https://github.com/facebookincubator/create-react-app/tree/master/packages/react-scripts).
