@@ -1,6 +1,6 @@
 {
   "name": "stoke-react-scripts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Common scripts for running React-based apps and websites",
   "repository": "stokestudio/stoke-react-scripts",
   "author": "Kevin Wade <kevin@stokestudio.com>",
@@ -38,7 +38,7 @@
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
     "webpack": "2.1.0-beta.22",
-    "webpack-dev-server": "^2.1.0-beta.8",
+    "webpack-dev-server": "2.1.0-beta.9",
     "whatwg-fetch": "^1.0.0"
   },
   "devDependencies": {
