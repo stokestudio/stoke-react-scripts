@@ -1,6 +1,7 @@
 var fs = require('fs');
 var path = require('path');
 var webpack = require('webpack');
+var nodeExternals = require('webpack-node-externals');
 
 var appDirectory = fs.realpathSync(process.cwd());
 var buildPath = path.resolve(appDirectory, 'build');
@@ -15,6 +16,8 @@ module.exports = {
     path: path.join(buildPath, 'server'),
     filename: 'index.js'
   },
+
+  externals: [nodeExternals()],
 
   plugins: [
     new webpack.LoaderOptionsPlugin({ minimize: true }),
