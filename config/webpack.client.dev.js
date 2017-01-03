@@ -29,41 +29,37 @@ module.exports = {
     new webpack.optimize.LimitChunkCountPlugin({ maxChunks: 1 })
   ],
 
-  eslint: {
-    useEslintrc: true
-  },
-
-  postcss: require('./postcss.config'),
-
   module: {
-    preLoaders: [
-      {
-        test: /\.js$/,
-        loader: 'eslint',
-        include: srcPath,
-      }
-    ],
     loaders: [
+      {
+        enforce: 'pre',
+        test: /\.js$/,
+        loader: 'eslint-loader',
+        include: srcPath,
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel',
+        loader: 'babel-loader',
         query: require('./babel.dev')
       },
       {
         test: /\.scss$/,
         loaders: [
-          'style',
+          'style-loader',
           {
-            loader: 'css',
+            loader: 'css-loader',
             query: {
               modules: 1,
               importLoaders: 1,
               localIdentName: '[name]_[local]_[hash:base64:5]'
             }
           },
-          'postcss',
-          'sass'
+          {
+            loader: 'postcss-loader',
+            query: { config: path.join(__dirname, 'postcss.config.js') }
+          },
+          'sass-loader'
         ]
       }
     ]

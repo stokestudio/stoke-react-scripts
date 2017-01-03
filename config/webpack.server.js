@@ -25,21 +25,21 @@ module.exports = {
     loaders: [
       {
         test: /\.html$/,
-        loader: 'html'
+        loader: 'html-loader'
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel',
+        loader: 'babel-loader',
         query: require('./babel.prod')
       },
       {
         test: /\.json$/,
-        loader: 'json'
+        loader: 'json-loader'
       },
       {
         test: /\.scss$/,
-        loader: 'css/locals?modules&importLoaders=1&localIdentName=[hash:base64:5]'
+        loader: 'css-loader/locals?modules&importLoaders=1&localIdentName=[hash:base64:5]'
       }
     ]
   }

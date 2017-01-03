@@ -31,11 +31,6 @@ module.exports = {
       debug: false
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),
-
-    // Fixed in newer webpack version
-    // https://github.com/webpack/karma-webpack/issues/41
-    // new webpack.optimize.DedupePlugin(),
-
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         screw_ie8: true,
@@ -52,14 +47,12 @@ module.exports = {
     new webpack.optimize.MinChunkSizePlugin({ minChunkSize: 25 * 1024 })
   ],
 
-  postcss: require('./postcss.config'),
-
   module: {
     loaders: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel',
+        loader: 'babel-loader',
         query: require('./babel.prod')
       },
       {
@@ -67,11 +60,14 @@ module.exports = {
         // ExtractTextPlugin is not yet compatible with Webpack 2
         // { loader: 'loaderName', query: {...} } loader syntax
         loader: ExtractTextPlugin.extract({
-          fallbackLoader: 'style',
+          fallbackLoader: 'style-loader',
           loader: [
-            'css?modules&importLoaders=1&localIdentName=[hash:base64:5]',
-            'postcss',
-            'sass'
+            'css-loader?modules&importLoaders=1&localIdentName=[hash:base64:5]',
+            {
+              loader: 'postcss-loader',
+              query: { config: path.join(__dirname, 'postcss.config.js') }
+            },
+            'sass-loader'
           ]
         })
       }
