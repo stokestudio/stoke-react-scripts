@@ -31,7 +31,11 @@ module.exports = {
       debug: false
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.optimize.DedupePlugin(),
+
+    // Fixed in newer webpack version
+    // https://github.com/webpack/karma-webpack/issues/41
+    // new webpack.optimize.DedupePlugin(),
+
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         screw_ie8: true,

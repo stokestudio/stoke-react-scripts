@@ -1,6 +1,6 @@
 {
   "name": "stoke-react-scripts",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Common scripts for running React-based apps and websites",
   "repository": "stokestudio/stoke-react-scripts",
   "author": "Kevin Wade <kevin@stokestudio.com>",
@@ -21,16 +21,16 @@
     "babel-preset-latest": "^6.16.0",
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-2": "^6.17.0",
-    "css-loader": "^0.25.0",
+    "css-loader": "^0.26.1",
     "eslint-loader": "^1.6.0",
     "extract-text-webpack-plugin": "^2.0.0-beta.4",
     "html-loader": "^0.4.4",
     "json-loader": "^0.5.4",
-    "node-sass": "^3.10.1",
+    "node-sass": "^4.1.1",
     "postcss-assets": "^4.1.0",
     "postcss-flexbugs-fixes": "^2.0.0",
     "postcss-loader": "^1.0.0",
-    "postcss-pseudo-class-any-link": "^1.0.0",
+    "postcss-pseudo-class-any-link": "^3.0.1",
     "postcss-pxtorem": "^3.3.1",
     "precss": "^1.4.0",
     "promise": "^7.1.1",
@@ -39,15 +39,15 @@
     "style-loader": "^0.13.1",
     "webpack": "2.1.0-beta.22",
     "webpack-dev-server": "2.1.0-beta.9",
-    "whatwg-fetch": "^1.0.0"
+    "whatwg-fetch": "^2.0.1"
   },
   "devDependencies": {
     "babel-eslint": "^7.0.0",
     "eslint": "^3.8.1",
-    "eslint-config-react-app": "^0.3.0",
+    "eslint-config-react-app": "^0.5.0",
     "eslint-plugin-flowtype": "^2.21.0",
     "eslint-plugin-import": "^2.0.1",
-    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.4.1"
   }
 }
