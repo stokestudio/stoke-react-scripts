@@ -39,7 +39,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loader: 'css-loader/locals?modules&importLoaders=1&localIdentName=[hash:base64:5]'
+        loader: 'css-loader/locals?modules&importLoaders=1&localIdentName=[hash:base64:5]!sass-loader'
       }
     ]
   }
