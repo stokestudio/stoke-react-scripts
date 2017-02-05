@@ -60,8 +60,8 @@ module.exports = {
         // ExtractTextPlugin is not yet compatible with Webpack 2
         // { loader: 'loaderName', query: {...} } loader syntax
         loader: ExtractTextPlugin.extract({
-          fallbackLoader: 'style-loader',
-          loader: [
+          fallback: 'style-loader',
+          use: [
             'css-loader?modules&importLoaders=1&localIdentName=[hash:base64:5]',
             {
               loader: 'postcss-loader',
