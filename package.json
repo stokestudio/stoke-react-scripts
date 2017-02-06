@@ -1,6 +1,6 @@
 {
   "name": "stoke-react-scripts",
-  "version": "2.0.0-beta.1",
+  "version": "2.0.0",
   "description": "Common scripts for running React-based apps and websites",
   "repository": "stokestudio/stoke-react-scripts",
   "author": "Kevin Wade <kevin@stokestudio.com>",

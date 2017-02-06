@@ -5,7 +5,7 @@ Common scripts for running React-based apps and websites.
 
 ## Features
 - Babel (Latest ES + Stage 2)
-- Webpack 2 (beta)
+- Webpack 2
 - CSS Compilation
   - SASS + PostCSS (autoprefixer, pxtorem, and automatic flexbox fixes)
 - Development
