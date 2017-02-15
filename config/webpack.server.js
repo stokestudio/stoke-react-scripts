@@ -24,6 +24,10 @@ module.exports = {
   module: {
     loaders: [
       {
+        test: /\.css$/,
+        loader: 'null-loader'
+      },
+      {
         test: /\.html$/,
         loader: 'html-loader'
       },

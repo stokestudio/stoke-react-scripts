@@ -32,6 +32,17 @@ module.exports = {
   module: {
     loaders: [
       {
+        test: /\.css$/,
+        loaders: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            query: { config: path.join(__dirname, 'postcss.config.js') }
+          }
+        ]
+      },
+      {
         enforce: 'pre',
         test: /\.js$/,
         loader: 'eslint-loader',

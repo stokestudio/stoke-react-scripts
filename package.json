@@ -1,6 +1,6 @@
 {
   "name": "stoke-react-scripts",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Common scripts for running React-based apps and websites",
   "repository": "stokestudio/stoke-react-scripts",
   "author": "Kevin Wade <kevin@stokestudio.com>",
@@ -27,6 +27,7 @@
     "html-loader": "^0.4.4",
     "json-loader": "^0.5.4",
     "node-sass": "^4.5.0",
+    "null-loader": "^0.1.1",
     "postcss-assets": "^4.1.0",
     "postcss-flexbugs-fixes": "^2.0.0",
     "postcss-loader": "^1.2.2",

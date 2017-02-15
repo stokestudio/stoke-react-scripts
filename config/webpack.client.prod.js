@@ -50,6 +50,19 @@ module.exports = {
   module: {
     loaders: [
       {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            'css-loader',
+            {
+              loader: 'postcss-loader',
+              query: { config: path.join(__dirname, 'postcss.config.js') }
+            }
+          ]
+        })
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
@@ -57,8 +70,6 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        // ExtractTextPlugin is not yet compatible with Webpack 2
-        // { loader: 'loaderName', query: {...} } loader syntax
         loader: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
