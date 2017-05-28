@@ -1,3 +1,6 @@
+// Enable async functions
+require('babel-polyfill');
+
 // Promise polyfill (mostly for IE11)
 if (typeof Promise === 'undefined') {
   // Rejection tracking prevents a common issue where React gets into an

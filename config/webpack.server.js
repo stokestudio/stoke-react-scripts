@@ -9,7 +9,10 @@ var srcPath = path.resolve(appDirectory, 'src');
 module.exports = {
   target: 'node',
 
-  entry: path.join(srcPath, 'server', 'index'),
+  entry: [
+    'babel-polyfill',
+    path.join(srcPath, 'server', 'index')
+  ],
 
   output: {
     path: path.join(buildPath, 'server'),
