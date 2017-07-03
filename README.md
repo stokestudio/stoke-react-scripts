@@ -13,7 +13,7 @@ Common scripts for running React-based apps and websites.
 - Production
   - Minified asset builds (both JS and CSS) with JS tree shaking
   - Splits JS assets into chunks
-- Supported Browsers: last 2 major versions of current browsers + IE11
+- Supported Browsers: last 2 major versions of current browsers, IE11, > 1% in US
   - Configured in CSS Autoprefixer
   - Promise polyfill for IE11
 
