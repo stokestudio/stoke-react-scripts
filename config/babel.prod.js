@@ -1,5 +1,6 @@
 module.exports = {
   plugins: [
+    ['import-inspector', { serverSideRequirePath: true }],
     'lodash',
     'transform-function-bind'
   ],

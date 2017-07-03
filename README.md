@@ -13,6 +13,7 @@ Common scripts for running React-based apps and websites.
 - Production
   - Minified asset builds (both JS and CSS) with JS tree shaking
   - Splits JS assets into chunks
+  - Server-side rendering of [react-loadable](https://github.com/thejameskyle/react-loadable) components (via [babel-plugin-import-inspector](https://github.com/thejameskyle/babel-plugin-import-inspector))
 - Supported Browsers: last 2 major versions of current browsers, IE11, > 1% in US
   - Configured in CSS Autoprefixer
   - Promise polyfill for IE11
